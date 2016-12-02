@@ -75,6 +75,7 @@ func (t *SimpleChaincode) Invoke(stub shim.ChaincodeStubInterface) ([]byte, erro
 
 // Query is our entry point for queries
 func (t *SimpleChaincode) Query(stub shim.ChaincodeStubInterface) ([]byte, error) {
+    fmt.Println("query entry")
 
     function, args := stub.GetFunctionAndParameters()
     fmt.Println("query is running " + function)
